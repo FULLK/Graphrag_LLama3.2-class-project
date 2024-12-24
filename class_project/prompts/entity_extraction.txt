@@ -1,0 +1,163 @@
+
+-Goal-
+Given a text document that is potentially relevant to this activity, first identify all entities needed from the text in order to capture the information and ideas in the text.
+Next, report all relationships among the identified entities.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, capitalized
+- entity_type: Suggest several labels or categories for the entity. The categories should not be specific, but should be as general as possible.
+- entity_description: Comprehensive description of the entity's attributes and activities
+Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity
+Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+
+3. Return output in Chinese as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+
+4. If you have to translate into Chinese, just translate the descriptions, nothing else!
+
+5. When finished, output {completion_delimiter}.
+
+-Examples-
+######################
+
+Example 1:
+
+text:
+�我们一起走进汉语课堂，领略汉语魅力！",,,,,,
+"评价：聆听兰霞老师的每堂讲课，感觉如沐春风，让人如痴如醉， 简直是美伦美奂 精彩绝伦， 扣人心弦 韵味无穷 精彩纷呈 文采飞扬 妙趣横生 辞采华美惟妙惟肖 津津有味 绘声绘色 娓娓动听 妙语连珠 行云流水！使人产生无限的敬佩之情！
+------------------------
+output:
+Based on the provided text, I will attempt to extract and format the required information according to the specified output format.
+
+**Step 1: Identify Entities**
+
+From the given text, I have identified the following entities:
+
+* **Person**: None explicitly mentioned
+* **Location**: None explicitly mentioned
+* **Organization**: None explicitly mentioned
+
+However, there are some phrases that could be considered as entities in a broader context:
+* "汉语课堂" (Chinese classroom)
+* "兰霞老师" (Teacher Lan Xia)
+
+**Step 2: Identify Relationships**
+
+From the given text, I have identified the following relationships:
+
+* None explicitly mentioned between two entities
+
+However, there are some phrases that could be considered as relationships in a broader context:
+* "我们一起走进汉语课堂" (We enter the Chinese classroom together) - This phrase implies a relationship between the speaker and the audience, but it's not clear what type of relationship it is.
+* "聆听兰霞老师的每堂讲课" (Listening to Teacher Lan Xia's every lecture) - This phrase implies a relationship between the speaker and Teacher Lan Xia, but it's not clear what type of relationship it is.
+
+**Step 3: Format Output**
+
+Based on the provided output format, I will attempt to create a structured output. However, since there are no explicit entities or relationships mentioned in the text, the output will be empty.
+
+```
+("entity"{tuple_delimiter}"汉语课堂"{tuple_delimiter}None{tuple_delimiter}"Chinese classroom"{tuple_delimiter}None{tuple_delimiter}8)
+("entity"{tuple_delimiter}"兰霞老师"{tuple_delimiter}None{tuple_delimiter}"Teacher Lan Xia"{tuple_delimiter}None{tuple_delimiter}8)
+
+("relationship"{tuple_delimiter}"我们一起走进汉语课堂"{tuple_delimiter}None{tuple_delimiter}"We enter the Chinese classroom together"{tuple_delimiter}None{tuple_delimiter}8)
+("relationship"{tuple_delimiter}"聆听兰霞老师的每堂讲课"{tuple_delimiter}None{tuple_delimiter}"Listening to Teacher Lan Xia's every lecture"{tuple_delimiter}None{tuple_delimiter}8)
+
+```
+
+Please note that the output is not accurate, as there are no explicit entities or relationships mentioned in the text. The provided output format seems to be designed for a specific type of input data
+#############################
+
+
+Example 2:
+
+text:
+方案，但是我能认真学习我们的课程，相信对我的教学有新的感悟，创造属于自己的合作课堂。""",,,,,,
+"8009-大连理工大学-章艳	电子技术（电工学 下）	""概述：《电工学》课程于2003年被评为辽宁省首批精品课程，2014年被评为辽宁省精品资源共享课程，2018年评为国家精品在线开放课程。课程教学团队为辽宁省教学团队，年均授课学生2000余人。授课教材
+------------------------
+output:
+Based on the provided text, I will perform the following tasks:
+
+1. Identify entities (people, places, organizations) and their types.
+2. Extract relationships between entities.
+3. Create a list of extracted entities and relationships in the required format.
+
+**Entities:**
+
+1. 人 (person): 
+	* 章艳 (Chapter)
+2. 地点 (location):
+	* 大连理工大学 (Dalian University of Technology)
+3. 组织 (organization):
+	* 电子技术（电工学 下）(Electronic Technology, Electrical Engineering)
+4. 课程 (course): 
+	* 《电工学》(Electrical Engineering)
+
+**Relationships:**
+
+1. 章艳是大连理工大学的教员。
+2. 章艳讲授《电工学》课程。
+3. 《电工学》课程被评为辽宁省首批精品课程。
+4. 《电工学》课程被评为辽宁省精品资源共享课程。
+5. 《电工学》课程被评为国家精品在线开放课程。
+
+**Output:**
+
+Here is the list of extracted entities and relationships in the required format:
+
+```
+{
+  "entities": [
+    {
+      "name": "",
+      "type": "person"
+    },
+    {
+      "name": "大连理工大学",
+      "type": "location"
+    },
+    {
+      "name": "电子技术（电工学 下）",
+      "type": "organization"
+    },
+    {
+      "name": "《电工学》",
+      "type": "course"
+    }
+  ],
+  "relationships": [
+    {
+      "entity1": "",
+      "relationship": "是大连理工大学的教员",
+      "entity2": "大连理工大学"
+    },
+    {
+      "entity1": "",
+      "relationship": "讲授《电工学》课程",
+      "entity2": "《电工学》"
+    },
+    {
+      "entity1": "《电工学》",
+      "relationship": "被评为辽宁省首批精品课程",
+      "entity2": ""
+    },
+    {
+      "entity1": "《电工学》",
+      "relationship": "被评为辽宁省精品资源共享课程",
+      "entity2": ""
+
+#############################
+
+
+
+-Real Data-
+######################
+text: {input_text}
+######################
+output:
