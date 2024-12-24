@@ -13,6 +13,17 @@ from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any, Union
 from contextlib import asynccontextmanager
 import uvicorn
+from fastapi import FastAPI, Request
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import JSONResponse
+import requests
+import json
+from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
+import json
+from pydantic import BaseModel
+
 
 # GraphRAG 相关导入
 from graphrag.query.context_builder.entity_extraction import EntityVectorStoreKey
@@ -503,6 +514,25 @@ async def list_models():
 
     logger.info(f"发送模型列表: {response}")
     return JSONResponse(content=response)
+
+
+# 配置CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 允许所有源
+    allow_credentials=True,
+    allow_methods=["*"],  # 允许所有方法
+    allow_headers=["*"],  # 允许所有头
+)
+
+# 模板配置
+templates = Jinja2Templates(directory="templates")
+# app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
+@app.get("/")
+async def index(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 

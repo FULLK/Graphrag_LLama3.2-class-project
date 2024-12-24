@@ -4,26 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32c9ce7d-c4e7-4a1a-ba99-37cd85a82c88" name="Changes" comment="Initial commit">
-      <changelist_data name="FULLK" email="3592569640@qq.com" automatic="false" />
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class_project/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class_project/utils/apiTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class_project/utils/graphrag3dknowledge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class_project/utils/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class_project/utils/neo4jTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/class_project/utils/spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+    <list default="true" id="32c9ce7d-c4e7-4a1a-ba99-37cd85a82c88" name="Changes" comment="no use">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/class_project/utils/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/GraphRAG4OpenWebUI-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GraphRAG4OpenWebUI-main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/other/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/other/temp/.env" beforeDir="false" afterPath="$PROJECT_DIR$/other/temp/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class_project/inputs/artifacts/lancedb/entity_description_embeddings.lance/_latest.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/class_project/inputs/artifacts/lancedb/entity_description_embeddings.lance/_latest.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class_project/utils/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/class_project/utils/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -32,19 +31,20 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "FULLK"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;FULLK&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/FULLK/Graphrag_LLama3.2-class-project.git",
-    "accountId": "06f8e758-a29c-4249-8fdc-a4cdaf0b8c07"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/FULLK/Graphrag_LLama3.2-class-project.git&quot;,
+    &quot;accountId&quot;: &quot;06f8e758-a29c-4249-8fdc-a4cdaf0b8c07&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -55,9 +55,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Python.apiTest.executor": "Run",
+    "Python.main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/data_disk/liulk/GraphragTest/class_project",
     "node.js.detected.package.eslint": "true",
@@ -75,24 +78,25 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26842487" />
-      <window_info active="true" id="Commit" order="1" visible="true" weight="0.26842487" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33200866" />
+      <window_info id="Commit" order="1" weight="0.19039017" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="HfCacheToolWindow" />
       <window_info anchor="bottom" id="File Transfer" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.36186185" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32063007" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.1916917" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.32063007" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Avro/Parquet Viewer" order="6" weight="0.3098098" />
-      <window_info anchor="bottom" id="Python Console" order="6" weight="0.35319766" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.51405036" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.55132115" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4636628" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.35319766" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.51405036" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.55132115" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="SciView" />
@@ -134,7 +138,8 @@
       <workItem from="1734767131410" duration="24000" />
       <workItem from="1734767165020" duration="15015000" />
       <workItem from="1734848581258" duration="3496000" />
-      <workItem from="1734854708709" duration="30381000" />
+      <workItem from="1734854708709" duration="35404000" />
+      <workItem from="1735035401872" duration="3158000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -152,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735025182018</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="no use">
+      <option name="closed" value="true" />
+      <created>1735025298568</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735025298568</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,9 +195,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="input  txt" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="no use" />
+    <option name="LAST_COMMIT_MESSAGE" value="no use" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GraphragTest$main.coverage" NAME="main 覆盖结果" MODIFIED="1735034769671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_project/utils" />
     <SUITE FILE_PATH="coverage/GraphragTest$apiTest.coverage" NAME="apiTest 覆盖结果" MODIFIED="1735017782784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_project/utils" />
   </component>
 </project>

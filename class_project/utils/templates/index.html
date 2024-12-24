@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能问答系统</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        .chat-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .model-selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .model-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #e4e6eb;
+        }
+
+        .model-btn.active {
+            background-color: #1877f2;
+            color: white;
+        }
+
+        .chat-container {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 18px;
+            max-width: 70%;
+        }
+
+        .user-message {
+            background-color: #1877f2;
+            color: white;
+            margin-left: auto;
+        }
+
+        .bot-message {
+            background-color: #e4e6eb;
+            color: black;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        #questionInput {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        #sendBtn {
+            padding: 10px 20px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #sendBtn:hover {
+            background-color: #166fe5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <h1>智能问答系统</h1>
+        </div>
+
+        <div class="model-selector">
+            <button class="model-btn active" data-model="graphrag-global-search:latest">全局搜索</button>
+            <button class="model-btn" data-model="graphrag-local-search:latest">本地搜索</button>
+            <button class="model-btn" data-model="full-model:latest">完整模型</button>
+        </div>
+
+        <div class="chat-container" id="chatContainer"></div>
+
+        <div class="input-container">
+            <textarea id="questionInput" placeholder="请输入您的问题..."></textarea>
+            <button id="sendBtn">发送</button>
+        </div>
+    </div>
+
+    <script>
+        let currentModel = 'graphrag-global-search:latest';
+
+        // 选择模型按钮点击事件
+        document.querySelectorAll('.model-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.model-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentModel = btn.dataset.model;
+            });
+        });
+
+        // 添加消息到聊天容器
+        function addMessage(content, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+
+            // 使用 marked 将 Markdown 转换为 HTML
+            const renderedContent = marked.parse(content);
+            messageDiv.innerHTML = renderedContent;
+
+            document.getElementById('chatContainer').appendChild(messageDiv);
+            messageDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 发送消息
+        async function sendMessage() {
+            const input = document.getElementById('questionInput');
+            const question = input.value.trim();
+
+            if (!question) return;
+
+            // 添加用户消息
+            addMessage(question, true);
+            input.value = '';
+
+            try {
+                const response = await fetch('http://localhost:8012/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        model: currentModel,
+                        messages: [{
+                            role: "user",
+                            content: question
+                        }],
+                        temperature: 0.7
+                    })
+                });
+
+                const data = await response.json();
+                const answer = data.choices[0].message.content;
+                addMessage(answer);
+            } catch (error) {
+                addMessage('发生错误：' + error.message);
+            }
+        }
+
+        // 发送按钮点击事件
+        document.getElementById('sendBtn').addEventListener('click', sendMessage);
+
+        // 输入框回车发送
+        document.getElementById('questionInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
