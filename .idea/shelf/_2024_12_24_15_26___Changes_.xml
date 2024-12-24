@@ -1,0 +1,16 @@
+<changelist name="在进行更新之前于_2024_12_24_15_26_取消提交了更改_[Changes]" date="1735025204013" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_12_24_15_26_取消提交了更改_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="在进行更新之前于 2024/12/24 15:26 取消提交了更改 [Changes]" />
+  <binary>
+    <option name="AFTER_PATH" value="other/one-api/one-api.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_12_24_15_26_取消提交了更改_[Changes]/one-api.exe" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="other/one-api/one-api" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_12_24_15_26_取消提交了更改_[Changes]/one-api" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="other/one-api/one-api-macos" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_12_24_15_26_取消提交了更改_[Changes]/one-api-macos" />
+  </binary>
+</changelist>
