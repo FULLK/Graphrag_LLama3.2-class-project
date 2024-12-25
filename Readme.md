@@ -5,7 +5,8 @@
 [如何利用 LLaMA 3 打造Agent智能体应用](https://mp.weixin.qq.com/s?__biz=MzI2OTE2NTQzMw==&mid=2650792016&idx=1&sn=368c2385d875eb841a02f0cbae670d8e&chksm=f3dbab9751628ea73b42c3423600848a42cfa9d06826fa6aa575bcc4a59cca273e2aa17ea555&mpshare=1&scene=23&srcid=1016HsdQM2dTRCesrM25r1eR&sharer_shareinfo=6aab980e4cf47949d2440953d7cf17d7&sharer_shareinfo_first=6aab980e4cf47949d2440953d7cf17d7#rd)
 [合集·大模型科普](https://space.bilibili.com/472543316/lists?sid=3378901&spm_id_from=333.788.0.0)
 [https://github.com/NanGePlus/GraphragTest](https://github.com/NanGePlus/GraphragTest)
-
+# 代码地址
+[https://github.com/FULLK/Graphrag_LLama3.2-class-project](https://github.com/FULLK/Graphrag_LLama3.2-class-project)
 # anaconda+pycharm
 
 [【大模型应用开发基础】集成开发环境搭建Anaconda+PyCharm](https://www.bilibili.com/video/BV1q9HxeEEtT/?vd_source=30acb5331e4f5739ebbad50f7cc6b949%20https://youtu.be/myVgyitFzrA)
