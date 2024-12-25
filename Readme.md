@@ -146,12 +146,14 @@ python main.py  #启动服务器
 # 索引导入nod4j生成知识图谱
 
 [【GraphRAG+知识图谱可视化】知识图谱neo4j可视化呈现，构建近2万字文本知识图谱，打造基于知识图谱的本地知识库，本地搜索、全局搜索二合一](https://www.bilibili.com/video/BV1prHxe4E9J?vd_source=30acb5331e4f5739ebbad50f7cc6b949&spm_id_from=333.788.videopod.sections)
-下载这个插件，方便查看Parquet[https://console-preview.neo4j.io/tools/query](https://console-preview.neo4j.io/tools/query)
+下载这个插件，方便查看Parquet
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/77c0e4bfb0eb4f2abdd49c7e99d2ee38.png)
 
 修改GRAPHRAG_FOLDER为你生成的artifacts文件
 
-使用在线的neo4j生成实例[https://console-preview.neo4j.io/tools/query](https://console-preview.neo4j.io/tools/query)
+使用在线的neo4j生成实例
+[https://console-preview.neo4j.io/tools/query](https://console-preview.neo4j.io/tools/query)
 改改密码账号实例名字
 ```python
 python3  neo4jTest.py
@@ -159,6 +161,7 @@ python3  neo4jTest.py
 
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/5842faac1c694e069cdce13b9bb0d231.png)
 
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/f2193d52e46b48cea3cb06f0b3800311.png)
 
 # 报错
 
@@ -216,6 +219,7 @@ ValueError: Columns must be same length as key
 ```
 这个根本原因是你的模型提取的结果不够好。一方面，你可以选择一个更强大的模型；另一方面，你可以将 settings.yaml 中的 llm:max_token 调小，或者也减小 chunks:size 和 overlap。
 
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3146a822bc464702ac89644a15455b15.png)
 
 # 生成neo4j知识图谱报错
 
